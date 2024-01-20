@@ -76,6 +76,7 @@ namespace GestorArticulos
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Si presiono la tecla enter..
             if(e.KeyChar == (char)Keys.Enter)
             {
                 List<Articulo> listaFiltrada = new List<Articulo>();
