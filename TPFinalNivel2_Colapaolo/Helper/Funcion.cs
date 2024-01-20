@@ -60,6 +60,8 @@ namespace Helper
 
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
+            dgvArticulos.Columns["Codigo"].Visible = false;
+            dgvArticulos.Columns["Descripcion"].Visible = false;
 
             ajustarColumnas(dgvArticulos);
 
