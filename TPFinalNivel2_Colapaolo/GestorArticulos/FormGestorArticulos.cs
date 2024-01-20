@@ -222,7 +222,7 @@ namespace GestorArticulos
             TipBuscar.ToolTipTitle = string.Empty;
             TipBuscar.ToolTipIcon = ToolTipIcon.Info;
             TipBuscar.IsBalloon = true;
-            TipBuscar.Show("Puede buscar por Nombre, Código, Categoría o Marca.\nPresione ENTER para buscar", txtBuscar, 0, -100, 5000);
+            TipBuscar.Show("Puede buscar por Nombre, Categoría o Marca.\nPresione ENTER para buscar", txtBuscar, 0, -100, 5000);
         }
 
         private void txtBuscar_MouseLeave(object sender, EventArgs e)
