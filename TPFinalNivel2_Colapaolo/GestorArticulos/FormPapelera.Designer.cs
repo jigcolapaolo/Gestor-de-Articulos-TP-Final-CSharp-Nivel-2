@@ -50,6 +50,10 @@
             // 
             // dgvArticulosPapelera
             // 
+            this.dgvArticulosPapelera.AllowUserToResizeColumns = false;
+            this.dgvArticulosPapelera.AllowUserToResizeRows = false;
+            this.dgvArticulosPapelera.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvArticulosPapelera.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvArticulosPapelera.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvArticulosPapelera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvArticulosPapelera.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -77,6 +81,7 @@
             this.dgvArticulosPapelera.MultiSelect = false;
             this.dgvArticulosPapelera.Name = "dgvArticulosPapelera";
             this.dgvArticulosPapelera.ReadOnly = true;
+            this.dgvArticulosPapelera.RowHeadersVisible = false;
             this.dgvArticulosPapelera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulosPapelera.Size = new System.Drawing.Size(367, 133);
             this.dgvArticulosPapelera.TabIndex = 3;
