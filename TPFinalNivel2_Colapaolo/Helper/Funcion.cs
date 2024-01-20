@@ -37,6 +37,8 @@ namespace Helper
             dgvArticulosPapelera.Columns["ImagenUrl"].Visible = false;
             dgvArticulosPapelera.Columns["Precio"].Visible = false;
             dgvArticulosPapelera.Columns["Descripcion"].Visible = false;
+            dgvArticulosPapelera.Columns["Marca"].Visible = false;
+            dgvArticulosPapelera.Columns["Categoria"].Visible = false;
         }
 
         public static void actualizarDgv(DataGridView dgvArticulos, PictureBox pbArticulo, List<Articulo> listaArticulos)
