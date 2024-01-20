@@ -35,7 +35,7 @@ namespace GestorArticulos
                 return;
             }
 
-            if(cbCampo.SelectedItem == "Precio" && !(Funcion.soloNumeros(txtFiltro.Text)))
+            if((string)cbCampo.SelectedItem == "Precio" && !(Funcion.soloNumeros(txtFiltro.Text)))
             {
                 MessageBox.Show("Precio seleccionado. Solo ingrese numeros.");
                 return;
