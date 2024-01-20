@@ -31,23 +31,13 @@ namespace Helper
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Articulo> listaArticulos = negocio.listarPapelera();
             dgvArticulosPapelera.DataSource = listaArticulos;
-            
-            //ajustarColumnas(dgvArticulosPapelera);
+        
 
             dgvArticulosPapelera.Columns["Id"].Visible = false;
             dgvArticulosPapelera.Columns["ImagenUrl"].Visible = false;
             dgvArticulosPapelera.Columns["Precio"].Visible = false;
             dgvArticulosPapelera.Columns["Descripcion"].Visible = false;
         }
-
-        //public static void ajustarColumnas(DataGridView dgvArticulos)
-        //{
-        //    dgvArticulos.RowHeadersWidth = 24;
-        //    dgvArticulos.Columns["Nombre"].Width = 124;
-        //    dgvArticulos.Columns["Marca"].Width = 60;
-        //    dgvArticulos.Columns["Categoria"].Width = 80;
-        //    dgvArticulos.Columns["Precio"].Width = 76;
-        //}
 
         public static void actualizarDgv(DataGridView dgvArticulos, PictureBox pbArticulo, List<Articulo> listaArticulos)
         {
@@ -60,8 +50,6 @@ namespace Helper
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
             dgvArticulos.Columns["Codigo"].Visible = false;
             dgvArticulos.Columns["Descripcion"].Visible = false;
-
-            //ajustarColumnas(dgvArticulos);
 
         }
 

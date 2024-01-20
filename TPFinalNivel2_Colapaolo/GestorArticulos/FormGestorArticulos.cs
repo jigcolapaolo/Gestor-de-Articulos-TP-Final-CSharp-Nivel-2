@@ -37,7 +37,6 @@ namespace GestorArticulos
                 pbArticulo.Load(listaArticulos[0].ImagenUrl);
 
                 Funcion.ocultarColumnas(dgvArticulos);
-                //Funcion.ajustarColumnas(dgvArticulos);
 
             }
             catch (Exception ex)
@@ -94,7 +93,6 @@ namespace GestorArticulos
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaFiltrada;
                 Funcion.ocultarColumnas(dgvArticulos);
-                //Funcion.ajustarColumnas(dgvArticulos);
             }
         }
 
@@ -210,7 +208,6 @@ namespace GestorArticulos
                 Funcion.cargarImagen(pbArticulo, listaArticulosFiltrada[0].ImagenUrl);
             }
             Funcion.ocultarColumnas(dgvArticulos);
-            //Funcion.ajustarColumnas(dgvArticulos);
         }
 
         private void FormGestorArticulos_FormClosing(object sender, FormClosingEventArgs e)
