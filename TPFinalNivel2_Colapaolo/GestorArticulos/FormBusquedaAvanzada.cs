@@ -47,9 +47,7 @@ namespace GestorArticulos
 
         private void FormBusquedaAvanzada_Load(object sender, EventArgs e)
         {
-            cbCampo.Items.Add("Código");
             cbCampo.Items.Add("Nombre");
-            cbCampo.Items.Add("Descripción");
             cbCampo.Items.Add("Marca");
             cbCampo.Items.Add("Categoría");
             cbCampo.Items.Add("Precio");
@@ -62,17 +60,50 @@ namespace GestorArticulos
 
             if(campo == "Precio")
             {
+                lblCondicion.Text = "Condición";
+                txtFiltro.Enabled = true;
+                txtFiltro.Text = "";
+                cbCondicion.DataSource = null;
                 cbCondicion.Items.Clear();
                 cbCondicion.Items.Add("Mayor a..");
                 cbCondicion.Items.Add("Menos a..");
                 cbCondicion.Items.Add("Igual a..");
             }
+            else if (campo == "Marca")
+            {
+                lblCondicion.Text = "Tipo";
+                MarcaNegocio negocio = new MarcaNegocio();
+                cbCondicion.DataSource = negocio.listar();
+                txtFiltro.Enabled = false;
+                txtFiltro.Text = cbCondicion.SelectedValue.ToString();
+            }
+            else if (campo == "Categoría")
+            {
+                lblCondicion.Text = "Tipo";
+                CategoriaNegocio negocio = new CategoriaNegocio();
+                cbCondicion.DataSource = negocio.listar();
+                txtFiltro.Enabled = false;
+                txtFiltro.Text = cbCondicion.SelectedValue.ToString();
+            }
             else
             {
+                lblCondicion.Text = "Condición";
+                txtFiltro.Enabled = true;
+                txtFiltro.Text = "";
+                cbCondicion.DataSource = null;
                 cbCondicion.Items.Clear();
                 cbCondicion.Items.Add("Empieza con..");
                 cbCondicion.Items.Add("Termina con..");
                 cbCondicion.Items.Add("Contiene..");
+            }
+        }
+        private void cbCondicion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string campo = cbCampo.SelectedItem.ToString();
+
+            if (campo == "Categoría" || campo == "Marca")
+            {
+                txtFiltro.Text = cbCondicion.SelectedValue.ToString(); 
             }
         }
 
@@ -85,5 +116,6 @@ namespace GestorArticulos
         }
 
         public event EventHandler EventoBuscar;
+
     }
 }

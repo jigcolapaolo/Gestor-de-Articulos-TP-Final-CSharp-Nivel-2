@@ -125,6 +125,7 @@
             this.cbCondicion.Name = "cbCondicion";
             this.cbCondicion.Size = new System.Drawing.Size(121, 20);
             this.cbCondicion.TabIndex = 1;
+            this.cbCondicion.SelectedIndexChanged += new System.EventHandler(this.cbCondicion_SelectedIndexChanged);
             this.cbCondicion.Click += new System.EventHandler(this.cbCondicion_Click);
             // 
             // txtFiltro
