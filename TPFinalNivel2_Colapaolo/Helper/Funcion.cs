@@ -16,8 +16,6 @@ namespace Helper
     {
         public static void cargarImagen(PictureBox pbArticulo, string imagen)
         {
-            //string rutaImagenError = Path.Combine("TPFinalNivel2_Colapaolo", "Imagenes", "Image_not_available.png");
-            //string rutaCompleta = Path.GetFullPath(rutaImagenError);
 
             try
             {
