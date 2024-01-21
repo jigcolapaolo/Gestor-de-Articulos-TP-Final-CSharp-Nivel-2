@@ -34,7 +34,7 @@ namespace GestorArticulos
             {
                 listaArticulos = negocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
-                pbArticulo.Load(listaArticulos[0].ImagenUrl);
+                Funcion.cargarImagen(pbArticulo, listaArticulos[0].ImagenUrl);
 
                 Funcion.ocultarColumnas(dgvArticulos);
 

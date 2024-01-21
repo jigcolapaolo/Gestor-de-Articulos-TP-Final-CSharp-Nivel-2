@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Dominio;
+using System.IO;
+using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Helper
 {
@@ -13,6 +16,9 @@ namespace Helper
     {
         public static void cargarImagen(PictureBox pbArticulo, string imagen)
         {
+            //string rutaImagenError = Path.Combine("TPFinalNivel2_Colapaolo", "Imagenes", "Image_not_available.png");
+            //string rutaCompleta = Path.GetFullPath(rutaImagenError);
+
             try
             {
             pbArticulo.Load(imagen);
@@ -21,7 +27,9 @@ namespace Helper
             catch (Exception)
             {
 
-                pbArticulo.Load("https://i.imgur.com/o2g90MG.png");
+                string rutaImagen = Path.Combine(System.Windows.Forms.Application.StartupPath, "Imagenes", "Image_not_available.png");
+                pbArticulo.Load(rutaImagen);
+
             }
         }
 
